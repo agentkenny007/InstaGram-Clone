@@ -8,8 +8,8 @@ export default function config($stateProvider, $urlRouterProvider){
             templateUrl: 'templates/home.template.htm',
             controller: 'HomeController'
         }).state('root.detail', {
-            url: '/about',
-            templateUrl: 'templates/about.template.htm',
+            url: '/detail',
+            templateUrl: 'templates/detail.template.htm',
             controller: 'DetailController'
         }).state('root.add', {
             url: '/add',

@@ -38,6 +38,10 @@ html, body { height: 100%; }
 body {
     font: 16px 'Josefin Sans';
     text-align: center;
+    #add {
+        font-weight: normal;
+        margin: 0.4em 0;
+    }
     .form-field {
         margin-bottom: 15px;
         .input {
@@ -58,6 +62,7 @@ body {
     min-height: 100%;
     padding: 20px;
     padding-bottom: 50px;
+    overflow: auto;
     header {
         h2 {
             font: 64px Lobster;
@@ -85,15 +90,18 @@ body {
         width: 50%;
         height: 100%;
         max-width: 450px;
-        max-height: 450px;
         padding: 15px;
         img {
             width: 100%;
             display: block;
         }
         span {
+            display: block;
+        }
+        a {
             position: relative;
             display: block;
+            color: black;
             border: 0.5px solid;
             border-top: 0.5px solid rgba(0, 0, 0, 0.45);
             border-right: 0;
@@ -131,8 +139,26 @@ body {
                 margin-right: 5px;
             }
         }
+        &.detail {
+            max-width: 66%;
+            float: left;
+            .likes {
+                position: relative;
+                top: 0;
+                right: 0;
+                color: red;
+                font-size: 3em;
+                text-shadow: 0 1px 1px red, 0 -1px 1px red, 0 2px 2px black;
+                padding-top: 10px;
+                background: white;
+                @include border-radius(4px 4px 0 0);
+                i {
+                    font-size: 0.8em;
+                }
+            }
+        }
         &:hover {
-            span:after {
+            a:after {
                 font-size: 1.25em;
                 font-weight: bold;
                 opacity: 1;
