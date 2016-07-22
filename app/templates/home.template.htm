@@ -1,5 +1,6 @@
 <ul>
     <li class="image" ng-repeat="img in imgs">
         <span style="background: url({{ img.url }}) center/cover no-repeat;" ng-data="{{ img._id }}" title="{{ img.name }}"></span>
+        <img src="images/img.template.png" alt="{{ img.name }}">
     </li>
 </ul>
