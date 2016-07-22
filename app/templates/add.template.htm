@@ -1,10 +1,13 @@
 <h1 class="title">Add a pic!</h1>
 <form ng-submit="addImg(img)">
-    <p class="control">
-      <input type="text" placeholder="Enter Gif Name" class="input" ng-model="img.name">
+    <p class="form-field">
+      <input type="text" placeholder="Photo/Video caption" class="name input" ng-model="img.name">
     </p>
-    <p class="control">
-      <input type="text" placeholder="Enter Gif URL" class="input" ng-model="img.url">
+    <p class="form-field">
+      <input type="text" placeholder="Photo/Video URL" class="url input" ng-model="img.url">
     </p>
-    <button class="button">Add Gif</button>
+    <p class="form-field">
+      <textarea placeholder="Photo/Video description" class="desc input" ng-model="img.url">
+    </p>
+    <button class="button">Add Photo</button>
 </form>
