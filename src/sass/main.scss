@@ -139,7 +139,7 @@ body {
                 margin-right: 5px;
             }
         }
-        &.detail {
+        &.detail, &.single {
             max-width: 66%;
             float: left;
             .likes {

@@ -1,6 +1,6 @@
 <ul>
     <li class="image" ng-repeat="img in imgs">
-        <a href="/#/detail#{{ img._id }}" style="background: url({{ img.url }}) center/cover no-repeat;" ng-dblclick="addLike(img)" title="{{ img.name }}">
+        <a href="/#/single/{{ img._id }}" style="background: url({{ img.url }}) center/cover no-repeat;" ng-dblclick="addLike(img)" title="{{ img.name }}">
             <img src="images/img.template.png" alt="{{ img.name }}">
         </a>
         <div class="likes"><i class="fa fa-heart"></i>{{ img.likes }}</div>

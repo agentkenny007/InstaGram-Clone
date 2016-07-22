@@ -19,6 +19,10 @@ export default function config($stateProvider, $urlRouterProvider){
             url: '/add',
             templateUrl: 'templates/edit.template.htm',
             controller: 'EditController'
+        }).state('root.single', {
+            url: '/single/:id',
+            templateUrl: 'templates/single.template.htm',
+            controller: 'SingleController'
         });
     $urlRouterProvider.otherwise('/');
 }
