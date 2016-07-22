@@ -29,19 +29,67 @@
     transform: $transformation;
 }
 
+html, body { height: 100%; }
 body {
-
+    text-align: center;
+    .form-field {
+        margin-bottom: 15px;
+        .input {
+            &.name {
+                max-width: 450px;
+            }
+            &.url {
+                max-width: 550px;
+            }
+            &.desc {
+                max-width: 650px;
+                height: 120px;
+            }
+        }
+    }
 }
 .container {
+    min-height: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    header {
+        h2 {
+            font: 64px Lobster;
+            text-shadow: 0 1px 1px #00225C, 0 3px 5px #A4C9FF, 0 2px 1px #0058CF;
+        }
+        nav {
+            font: 44px 'Poiret One';
+            margin-left: -0.575em;
+            a {
+                color: #006DFF;
+                &:hover {
+                    color: #08183D;
+                }
+            }
+        }
+        .icon {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background: url(../images/icon.png) no-repeat;
+        }
+    }
     .image {
-        float: left;
-        width: 250px;
-        height: 250px;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        max-width: 450px;
+        max-height: 450px;
         padding: 15px;
-        span {
+        img {
             width: 100%;
-            height: 100%;
             display: block;
+        }
+        span {
+            position: absolute;
+            display: block;
+            left: 15px; right: 15px;
+            top: 15px; bottom: 15px;
             border: 0.5px solid;
             border-top: 0.5px solid rgba(0, 0, 0, 0.45);
             border-right: 0;
@@ -50,5 +98,11 @@ body {
             @include border-radius(5px 5px 0 8px);
             @include box-shadow(0 5px 16px -5px black);
         }
+    }
+    footer {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
     }
 }
