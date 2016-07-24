@@ -1,7 +1,7 @@
-export default function HomeController($scope, $http, SERVER){
+export default function Home($scope, $http, SERVER){
     init();
     function init(){
-        $http.get(SERVER.URL).then(resp => {
+        $http.get(SERVER.URL, { params: { limit: 100 } }).then(resp => {
             $scope.imgs = resp.data;
         });
     }
@@ -12,4 +12,4 @@ export default function HomeController($scope, $http, SERVER){
     };
 }
 
-HomeController.$inject = ['$scope', '$http', 'SERVER'];
+Home.$inject = ['$scope', '$http', 'SERVER'];

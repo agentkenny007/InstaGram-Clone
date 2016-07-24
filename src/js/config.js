@@ -7,6 +7,10 @@ export default function config($stateProvider, $urlRouterProvider){
             url: '/',
             templateUrl: 'templates/home.template.htm',
             controller: 'HomeController'
+        }).state('root.salads', {
+            url: '/hilarious-salads',
+            templateUrl: 'templates/home.template.htm',
+            controller: 'SaladsController'
         }).state('root.detail', {
             url: '/detail',
             templateUrl: 'templates/detail.template.htm',
@@ -16,11 +20,11 @@ export default function config($stateProvider, $urlRouterProvider){
             templateUrl: 'templates/add.template.htm',
             controller: 'AddController'
         }).state('root.edit', {
-            url: '/add',
+            url: '/edit',
             templateUrl: 'templates/edit.template.htm',
             controller: 'EditController'
         }).state('root.single', {
-            url: '/single/:id',
+            url: '/single/{id}',
             templateUrl: 'templates/single.template.htm',
             controller: 'SingleController'
         });

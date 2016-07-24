@@ -1,7 +1,8 @@
 <h1 class="single title">{{ IMG.name }}</h1>
 <div class="single image">
     <div class="likes"><i class="fa fa-heart-o"></i>{{ IMG.likes }}</div>
-    <span style="background: url({{ IMG.url }}) center/cover no-repeat;" ng-dblclick="addLike(IMG)" title="{{ IMG.name }}">
+    <span class="like" style="background: url({{ IMG.url }}) center/cover no-repeat;" ng-dblclick="addLike(IMG)" title="{{ IMG.name }}">
         <img src="images/img.template.png" alt="{{ IMG.name }}">
+        <i class="fa fa-heart"></i>
     </span>
 </div>

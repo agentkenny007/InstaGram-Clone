@@ -38,9 +38,9 @@ html, body { height: 100%; }
 body {
     font: 16px 'Josefin Sans';
     text-align: center;
-    #add {
+    .add {
         font-weight: normal;
-        margin: 0.4em 0;
+        margin: 1em 0;
     }
     .form-field {
         margin-bottom: 15px;
@@ -87,7 +87,7 @@ body {
     }
     .image {
         display: inline-block;
-        width: 50%;
+        width: 20%;
         height: 100%;
         max-width: 450px;
         padding: 15px;
@@ -111,7 +111,7 @@ body {
             @include box-shadow(0 5px 16px -5px black);
             &:after {
                 position: absolute;
-                content: attr(title);
+                content: attr(data-t);
                 width: 100%;
                 left: 0;
                 bottom: 1px;
@@ -129,21 +129,53 @@ body {
         }
         .likes {
             position: absolute;
-            top: 40px;
-            right: 25px;
+            cursor: url(../images/heart.png), auto;
+            top: 1.1em;
+            right: 1.1em;
             color: white;
             font-size: 2em;
             text-shadow: 0 1px 2px black;
             i {
                 color: red;
                 margin-right: 5px;
+                &.naught {
+                    color: white;
+                }
             }
         }
         &.detail, &.single {
-            max-width: 66%;
             float: left;
+            width: 64%;
+            max-width: none;
+            border: 0.5px solid;
+            border-top: 0.5px solid rgba(0, 0, 0, 0.45);
+            border-right: 0;
+            border-right: 0.5px solid rgba(0, 0, 0, 0.75);
+            border-bottom: 0.5px solid white;
+            padding: 0;
+            @include border-radius(12px 12px 0 0);
+            @include box-shadow(0 5px 16px -5px black);
+            span {
+                position: relative;
+                @include box-shadow(inset 0 0 25px);
+                i {
+                    position: absolute;
+                    top: 50%;
+                    margin: -0.5em;
+                    color: white;
+                    font-size: 5em;
+                    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5), 0 3px 7px white, 0 -1px 1px black, 0 2px 2px black;
+                    opacity: 0;
+                    @include transition(all 0.15s ease-out);
+                }
+                &.liked i {
+                    font-size: 10em;
+                    opacity: 0.945;
+                }
+            }
             .likes {
                 position: relative;
+                cursor: default;
                 top: 0;
                 right: 0;
                 color: red;
@@ -151,7 +183,10 @@ body {
                 text-shadow: 0 1px 1px red, 0 -1px 1px red, 0 2px 2px black;
                 padding-top: 10px;
                 background: white;
-                @include border-radius(4px 4px 0 0);
+                border-bottom: 1px solid grey;
+                z-index: 1;
+                @include border-radius(12px 12px 0 0);
+                @include box-shadow(0 5px 9px -5px black);
                 i {
                     font-size: 0.8em;
                 }
