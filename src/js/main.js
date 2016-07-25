@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'angular-ui-router';
+import 'ng-content-editable';
 import config from './config';
 import SERVER from './server.constant';
 import HomeController from './controllers/home.controller';
@@ -10,7 +11,7 @@ import EditController from './controllers/edit.controller';
 import SingleController from './controllers/single.controller';
 
 angular
-    .module('app', ['ui.router'])
+    .module('app', ['ui.router','content-editable'])
     .config(config)
     .constant('SERVER', SERVER)
     .controller('HomeController', HomeController)

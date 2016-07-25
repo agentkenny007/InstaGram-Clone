@@ -1,10 +1,10 @@
 <h1 class="add title">Add a photo!</h1>
 <form ng-submit="addImg(img)">
     <p class="form-field">
-      <input type="text" placeholder="Photo caption" class="name input" ng-model="img.name">
+      <input type="text" placeholder="Photo caption" class="name input" ng-model="img.name" required>
     </p>
     <p class="form-field">
-      <input type="text" placeholder="Photo URL" class="url input" ng-model="img.url">
+      <input type="url" placeholder="Photo URL" class="url input" ng-model="img.url" required>
     </p>
     <p class="form-field">
       <textarea placeholder="Photo description" class="desc input" ng-model="img.desc"></textarea>
@@ -14,10 +14,10 @@
 <h1 class="add salads title">Add a hilarious salad meme!</h1>
 <form ng-submit="addHilariousSalad(meme)">
     <p class="form-field">
-      <input type="text" placeholder="Caption for MEME" class="name input" ng-model="meme.name">
+      <input type="text" placeholder="Caption for MEME" class="name input" ng-model="meme.name" required>
     </p>
     <p class="form-field">
-      <input type="text" placeholder="MEME URL" class="url input" ng-model="meme.url">
+      <input type="url" placeholder="MEME URL" class="url input" ng-model="meme.url" required>
     </p>
     <p class="form-field">
       <textarea placeholder="MEME description" class="desc input" ng-model="meme.desc"></textarea>

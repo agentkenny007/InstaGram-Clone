@@ -13,7 +13,7 @@ export default function config($stateProvider, $urlRouterProvider){
             controller: 'SaladsController'
         }).state('root.detail', {
             url: '/detail',
-            templateUrl: 'templates/detail.template.htm',
+            templateUrl: 'templates/single.template.htm',
             controller: 'DetailController'
         }).state('root.add', {
             url: '/add',

@@ -25,6 +25,20 @@ export default function SingleController($scope, $document, $http, SERVER, $stat
             $document.find('span').eq(1).removeClass('liked');
         }, 1000);
     };
+
+    $scope.updateName = img => {
+        console.log('local img', img);
+        console.log('large img', $scope.IMG);
+        console.log('Title', $scope.Title);
+        if ($scope.nameTimeout) clearTimeout($scope.nameTimeout);
+        $scope.nameTimeout = setTimeout(()=>{
+            $scope.Title = 'happiness.';
+            $scope.state == 'salads' ? $http.put(SERVER.SALADS + img._id, img) :
+            $http.put(SERVER.URL + img._id, img);
+            // $scope.state == 'salads' ? $http.patch(SERVER.SALADS + img._id, { name: img.name }) :
+            // $http.patch(SERVER.URL + img._id, { name: img.name });
+        }, 500);
+    };
 }
 
 SingleController.$inject = ['$scope', '$document', '$http', 'SERVER', '$state', '$stateParams'];
