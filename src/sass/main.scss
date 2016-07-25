@@ -222,6 +222,29 @@ body {
             }
         }
     }
+    .description {
+        float: left;
+        width: 36%;
+        padding-left: 1.5em;
+        p {
+            padding: 1em;
+            font-size: 1.4em;
+            border-bottom: 1px solid lighten(#006DFF, 10%);
+            @include transition(all 0.375s ease);
+            &:hover {
+                background: lighten(#F5F7FA, 15%);
+                @include border-radius(5px);
+                @include box-shadow(0 15px 20px -15px);
+                @include filter(drop-shadow(0 1px 1px darken(#338aff, 15%)));
+            }
+            &:focus {
+                color: darken(#338aff, 25%);
+                border-color: white;
+                background: none;
+                @include border-radius(5px);
+            }
+        }
+    }
     footer {
         position: absolute;
         left: 20px;
