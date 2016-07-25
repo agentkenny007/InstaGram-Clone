@@ -33,6 +33,12 @@ export default function SingleController($scope, $document, $http, SERVER, $stat
             $http.put(SERVER.URL + img._id, img);
         }, 500);
     };
+
+    $scope.delete = img => {
+        if (confirm("Are you sure that you want this image deleted?\nThis action cannot be undone."))
+            $scope.state == 'salads' ? $http.delete(SERVER.SALADS + img._id, img).then(()=>{ $state.go('root.salads'); }) :
+            $http.delete(SERVER.URL + img._id).then(()=>{ $state.go('root.home'); });
+    }
 }
 
 SingleController.$inject = ['$scope', '$document', '$http', 'SERVER', '$state', '$stateParams'];
