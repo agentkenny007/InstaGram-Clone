@@ -85,7 +85,7 @@ body {
             background: url(../images/icon.png) no-repeat;
         }
     }
-    h1 {
+    h1.single {
         font-weight: bold;
         font-size: 4em;
         text-align: left;
@@ -227,6 +227,13 @@ body {
                     overflow: hidden;
                     @include border-radius(0 12px 0 0);
                     @include transition(all 0.175s ease-in);
+                    &.edit-image {
+                        background: black;
+                        text-shadow: 0 1px 1px white;
+                        left: 0;
+                        right: inherit;
+                        @include border-radius(12px 0 0 0);
+                    }
                 }
                 &:hover {
                     button {

@@ -8,10 +8,10 @@ export default function Detail($scope, $document, $http, SERVER, $location, $sta
     function init(){
         $http.get(SERVER.URL + $location.$$hash).then(resp => {
             if (!$location.$$hash)
-                // $state.go('root.home');
+                $state.go('root.home');
             $scope.IMG = resp.data;
         }, ()=>{
-            // $state.go('root.home');
+            $state.go('root.home');
         });
     }
 

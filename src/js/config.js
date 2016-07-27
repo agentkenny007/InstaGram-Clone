@@ -19,10 +19,6 @@ export default function config($stateProvider, $urlRouterProvider){
             url: '/add',
             templateUrl: 'templates/add.template.htm',
             controller: 'AddController'
-        }).state('root.edit', {
-            url: '/edit',
-            templateUrl: 'templates/edit.template.htm',
-            controller: 'EditController'
         }).state('root.single', {
             url: '/single/{id}',
             templateUrl: 'templates/single.template.htm',

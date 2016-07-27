@@ -7,7 +7,6 @@ import HomeController from './controllers/home.controller';
 import SaladsController from './controllers/salads.controller';
 import DetailController from './controllers/detail.controller';
 import AddController from './controllers/add.controller';
-import EditController from './controllers/edit.controller';
 import SingleController from './controllers/single.controller';
 
 angular
@@ -18,5 +17,4 @@ angular
     .controller('SaladsController', SaladsController)
     .controller('DetailController', DetailController)
     .controller('AddController', AddController)
-    .controller('EditController', EditController)
     .controller('SingleController', SingleController);

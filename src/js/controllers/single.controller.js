@@ -26,9 +26,14 @@ export default function SingleController($scope, $document, $http, SERVER, $stat
         }, 1000);
     };
 
+    $scope.updateImg = img => {
+        img.url = prompt("Enter image url:", img.url) || img.url;
+        $scope.update(img);
+    }
+
     $scope.update = img => {
-        if ($scope.nameTimeout) clearTimeout($scope.nameTimeout);
-        $scope.nameTimeout = setTimeout(()=>{
+        if ($scope.timeout) clearTimeout($scope.timeout);
+        $scope.timeout = setTimeout(()=>{
             $scope.state == 'salads' ? $http.put(SERVER.SALADS + img._id, img) :
             $http.put(SERVER.URL + img._id, img);
         }, 500);

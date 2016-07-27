@@ -44,6 +44,7 @@
     "angular-ui-router": "^0.3.1",
     "bulma": "^0.1.0",
     "lodash": "^4.13.1",
-    "ng-content-editable": "0.0.2"
+    "ng-content-editable": "0.0.2",
+    "popcorn-js": "git+https://github.com/agentkenny007/popcorn-js.git"
   }
 }
