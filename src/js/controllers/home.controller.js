@@ -1,7 +1,8 @@
 export default function Home($scope, $http, SERVER){
     init();
     function init(){
-        $http.get(SERVER.URL, { params: { limit: 100 } }).then(resp => {
+        // $http.get(SERVER.URL, { params: { limit: 100 } }).then(resp => {
+        $http.get(SERVER.URL).then(resp => {
             $scope.imgs = resp.data;
         });
     }
