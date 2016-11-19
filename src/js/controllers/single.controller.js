@@ -20,9 +20,9 @@ export default function SingleController($scope, $document, $http, SERVER, $stat
         img.likes++;
         $scope.state == 'salads' ? $http.put(SERVER.SALADS + img._id, img) :
         $http.put(SERVER.URL + img._id, img);
-        $document.find('span').eq(1).addClass('liked');
+        $document.find('span').eq(0).addClass('liked');
         setTimeout(()=>{
-            $document.find('span').eq(1).removeClass('liked');
+            $document.find('span').eq(0).removeClass('liked');
         }, 1000);
     };
 
